@@ -13,6 +13,7 @@ h1 {
 .container {
   width: 50%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #1e86ca;
@@ -22,9 +23,9 @@ h1 {
 .container #form {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   vertical-align: middle;
-  flex-wrap: wrap;
   align-items: center;
 }
 .container #form .right {
@@ -52,16 +53,13 @@ select {
   padding: 10px;
   margin: 10px;
   outline: #1e86ca;
-  border: 2px solid #1e86ca;
+  border: 1px solid #1e86ca;
 }
 
 label[for="web"] {
   padding: 20px;
-  /* width: 100%; */
-  /* display: inline; */
-  /* font-size: 18px; */
-  /* align-items: center; */
 }
+
 input[type="checkbox"] {
   /* width: 100%; */
   /* display: inline; */
@@ -77,7 +75,7 @@ textarea {
   padding: 10px;
   margin: 10px;
   outline: #1e86ca;
-  border: 2px solid #1e86ca;
+  border: 1px solid #1e86ca;
 }
 button[type="submit"],
 button[type="reset"] {
@@ -90,4 +88,27 @@ button[type="reset"] {
   border: none;
   outline: none;
   color: #fff;
+}
+.container2 {
+  width: 70%;
+}
+
+/* media query */
+@media screen and (min-width: 250px) and (max-width: 930px) {
+  .container {
+    width: 100%;
+  }
+
+  .container #form {
+    width: 100%;
+  }
+  .container #form .left-form {
+    display: none;
+  }
+
+  .container #form .right {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+  }
 }
